@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Project Vikas: a month of mentoring young women in tech, dedicated to my father Vikas on his 61st birthday.">
+<meta name="description" content="Project Vikas: a free weekly mentoring circle for young women in tech, October to December 2026, dedicated to my father Vikas on his 61st birthday.">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Project Vikas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a dedication letter up top, then the programme as a single readable column with a four-week calendar strip */
+/* Layout: a dedication letter up top, then the programme as a single readable column with a 13-week calendar strip */
 :root {
   --bg: #F6F5FA;
   --surface: #FFFFFF;
@@ -66,10 +66,8 @@ section > p { max-width: 62ch; color: var(--ink); }
 .fact .t { font-size: 14px; color: var(--muted); }
 
 /* Week strip */
-.weeks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.wk { border: 1px solid var(--line); border-radius: 8px; display: grid; gap: 2px; padding: 14px 12px; font-family: var(--mono); font-size: 12px; color: var(--muted); background: var(--surface); min-width: 0; }
-.wk b { font-family: var(--display); font-weight: 400; font-size: 22px; color: var(--ink); line-height: 1.1; }
-.wk.now b { color: var(--bg); }
+.weeks { display: grid; grid-template-columns: repeat(13, 1fr); gap: 6px; }
+.wk { aspect-ratio: 1 / 1.4; max-width: 100%; border: 1px solid var(--line); border-radius: 4px; display: grid; place-items: end center; padding-bottom: 6px; font-family: var(--mono); font-size: 11px; color: var(--muted); background: var(--surface); }
 .wk.done { background: var(--marigold-soft); border-color: transparent; }
 .wk.now { background: var(--marigold); color: var(--bg); border-color: var(--marigold); font-weight: 500; }
 .weeks-cap { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--muted); gap: 12px; flex-wrap: wrap; }
@@ -114,6 +112,8 @@ section > p { max-width: 62ch; color: var(--ink); }
 .scarce b { color: var(--ink); }
 
 /* Apply */
+.email { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 16px 20px; border: 1px solid var(--marigold); border-radius: 10px; background: var(--surface); }
+.email .addr { font-family: var(--mono); font-size: 17px; color: var(--ink); user-select: all; overflow-wrap: anywhere; min-width: 0; }
 .template { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .template pre { margin: 0; padding: 20px; font-family: var(--mono); font-size: 14px; line-height: 1.7; white-space: pre-wrap; color: var(--ink); }
 .template .bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px 10px 20px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted); }
@@ -129,7 +129,8 @@ footer .hi { font-family: var(--display); color: var(--indigo); font-size: 18px;
   .fact + .fact { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
   .tracks { grid-template-columns: 1fr; }
   .topics li { grid-template-columns: 1fr; gap: 4px; }
-  .weeks { grid-template-columns: 1fr 1fr; }
+  .weeks { gap: 3px; }
+  .wk { font-size: 9px; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .wk.now { animation: glow 2.4s ease-in-out infinite alternate; }
@@ -149,70 +150,44 @@ footer .hi { font-family: var(--display); color: var(--indigo); font-size: 18px;
     <h1>For Papa, on turning <em>61</em>.</h1>
     <div class="letter">
       <p>You pushed me to stand on my own feet, and then you stood behind me every time I did. In good times and hard ones, you never once made me feel I was on my own.</p>
-      <p>I can't give that back to you, so I want to pass it on. Project Vikas is my birthday present to you: a month of my time spent helping young women in tech grow the way you helped me grow.</p>
+      <p>I can't give that back to you, so I want to pass it on. Project Vikas is my birthday present to you: the rest of this year spent helping young women in tech grow the way you helped me grow.</p>
       <p class="sign">— Tanya</p>
     </div>
   </header>
 
   <section id="about">
     <span class="label">The project</span>
-    <h2>Three hours a week, for young women finding their footing in tech</h2>
-    <p>Through October 2026, I'm setting aside three hours every week to mentor young women in technology. Some are early in their careers and want to move faster. Some are between jobs and want a way back in. All of them deserve someone in their corner who believes they can grow into their own power at work.</p>
+    <h2>One free hour a week, for young women finding their footing in tech</h2>
+    <p>From October to the end of December 2026, I'm hosting a free one-hour mentoring circle every week for young women in technology. Some are early in their careers and want to move faster. Some are between jobs and want a way back in. All of them deserve someone in their corner who believes they can grow into their own power at work.</p>
     <div class="facts">
-      <div class="fact"><span class="n">3 hrs</span><span class="t">of mentoring every week</span></div>
-      <div class="fact"><span class="n">4</span><span class="t">weeks, all of October</span></div>
-      <div class="fact"><span class="n">~12</span><span class="t">hours given in total</span></div>
+      <div class="fact"><span class="n">1 hr</span><span class="t">every week, on one call</span></div>
+      <div class="fact"><span class="n">13</span><span class="t">weeks, October to December</span></div>
+      <div class="fact"><span class="n">Free</span><span class="t">for every woman who joins</span></div>
     </div>
   </section>
 
   <section id="calendar">
     <span class="label">Where we are</span>
-    <div class="weeks" id="weeks" aria-label="4 weeks from 5 October to 31 October 2026"></div>
-    <div class="weeks-cap"><span>Mon 5 Oct 2026</span><span id="weekNow"></span><span>Sat 31 Oct 2026</span></div>
+    <div class="weeks" id="weeks" aria-label="13 weeks from 5 October to 31 December 2026"></div>
+    <div class="weeks-cap"><span>Mon 5 Oct 2026</span><span id="weekNow"></span><span>Thu 31 Dec 2026</span></div>
   </section>
 
-  <section id="format">
+  <section id="circle">
     <span class="label">How it works</span>
-    <h2>One circle, plus time one-on-one</h2>
+    <h2>The Circle</h2>
+    <p>Women who are working and women who are between jobs meet on the same call, once a week. Each week I teach one topic, then we work through real situations from the group. You'll hear what's happening inside companies right now, and you'll build a network of women going through the same things you are.</p>
+  </section>
+
+  <section id="topics">
+    <span class="label">What we'll work on</span>
+    <h2>Coming into your own power, professionally</h2>
     <ul class="topics">
-      <li><span class="k">The Circle</span><span class="v"><b>60 minutes, every week, free for everyone.</b> Women who are working and women who are between jobs meet on one call. Each week I teach one topic, then we work through real situations from the group.</span></li>
-      <li><span class="k">1:1 time</span><span class="v"><b>2 hours every weekend, paid, limited slots.</b> Four 30-minute private sessions a week, on Saturdays and Sundays only. Use one to dig into your own career: your plan, your CV, a hard conversation coming up, the next step you're weighing.</span></li>
+      <li><span class="k">Direction</span><span class="v">Work out what you actually want from your career and build a plan for the next 12 months.</span></li>
+      <li><span class="k">Visibility</span><span class="v">Make your work seen: your CV, your LinkedIn and the people who should know your name.</span></li>
+      <li><span class="k">Negotiation</span><span class="v">Ask for the offer, raise or promotion you've earned, and hold your ground when you get pushback.</span></li>
+      <li><span class="k">Breaking into AI</span><span class="v">The skills that matter now in GenAI and agentic AI, and how to build them from where you are.</span></li>
+      <li><span class="k">Voice</span><span class="v">Speak with authority in meetings, at work and in public, without shrinking.</span></li>
     </ul>
-  </section>
-
-  <section id="who">
-    <span class="label">Who it's for</span>
-    <h2>Two ways in</h2>
-    <div class="tracks">
-      <div class="track">
-        <span class="price">Free</span>
-        <h3>Between jobs</h3>
-        <p>If you're a woman in tech who is currently unemployed, the weekly Circle is free for you, every week through October. Losing a job, or not landing the first one, shouldn't decide whether you get support.</p>
-      </div>
-      <div class="track">
-        <span class="price">Circle free · sessions paid</span>
-        <h3>Working professionals</h3>
-        <p>If you're working in tech and want to grow into a bigger role, lead with more confidence, or change direction, join the Circle for free and book whichever 1:1 sessions you need.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="sessions">
-    <span class="label">1:1 sessions</span>
-    <h2>Book the session you need</h2>
-    <p class="scarce"><b>Only 4 slots a week, weekends only.</b> Each session is 30 minutes and runs on a Saturday or Sunday. Slots go to applications in the order they arrive.</p>
-    <p>Five sessions, each focused on one thing. Book one, or several during October. Every session ends with a written plan for your next step.</p>
-    <div class="rates">
-      <div class="rate"><span class="amt">AUD 250</span><span class="t">per session</span></div>
-      <div class="rate"><span class="amt">AUD 125</span><span class="t">early-career rate: under 3 years' experience, or based outside Australia, the US and Europe</span></div>
-    </div>
-    <div class="menu">
-      <div class="session"><h3>Career Direction</h3><p>Work out what you actually want and leave with a 12-month plan to get there.</p></div>
-      <div class="session"><h3>CV &amp; LinkedIn Teardown</h3><p>A line-by-line review so your experience reads at the level you're aiming for.</p></div>
-      <div class="session"><h3>Negotiation Prep</h3><p>Prepare to ask for the offer, raise or promotion you've earned, and rehearse the conversation.</p></div>
-      <div class="session"><h3>Breaking into AI</h3><p>A skills roadmap for moving into GenAI and agentic AI work, based on where you are now.</p></div>
-      <div class="session"><h3>Visibility &amp; Voice</h3><p>Get your work seen and speak with authority in meetings, at work and in public.</p></div>
-    </div>
   </section>
 
   <section id="mentor">
@@ -222,47 +197,45 @@ footer .hi { font-family: var(--display); color: var(--indigo); font-size: 18px;
   </section>
 
   <section id="apply">
-    <span class="label">Apply</span>
-    <h2>Tell me where you are and where you want to go</h2>
-    <p>1:1 slots are limited to four a week, on weekends only. Copy the note below, fill it in, and send it to me.</p>
+    <span class="label">Join</span>
+    <h2>Sign up by email</h2>
+    <p>Send an email to the address below and I'll reply with the call details. Copy the note to tell me a little about yourself.</p>
+    <div class="email">
+      <span class="addr" id="addr">info.project.vikas@gmail.com</span>
+      <button type="button" id="copyAddr">Copy address</button>
+    </div>
     <div class="template">
-      <div class="bar"><span>Application note</span><button type="button" id="copyBtn">Copy</button></div>
-      <pre id="tpl">Hi Tanya, I'd like to join Project Vikas.
+      <div class="bar"><span>Sign-up note</span><button type="button" id="copyBtn">Copy</button></div>
+      <pre id="tpl">Hi Tanya, I'd like to join the Project Vikas Circle.
 
 Name:
 City / time zone:
-I am: Between jobs / Early-career / Working professional
 Current or most recent role:
-Session(s) I'd like to book:
-What I want to work on this month:
+What I want to work on before the end of the year:
 One thing that's holding me back right now:
-Link to LinkedIn or CV:</pre>
+LinkedIn (optional):</pre>
     </div>
-    <p class="contact" id="contact">Contact details coming soon.</p>
   </section>
 
   <footer>
     <span><span class="hi" lang="hi">विकास</span> · Project Vikas</span>
-    <span>October 2026 · Sydney</span>
+    <span>October – December 2026 · Sydney</span>
   </footer>
 </div>
 
 <script>
 (function () {
   var start = new Date(2026, 9, 5);           // Mon 5 Oct 2026
-  var end = new Date(2026, 9, 31, 23, 59);    // Sat 31 Oct 2026
+  var end = new Date(2026, 11, 31, 23, 59);   // Thu 31 Dec 2026
   var now = new Date();
   var day = 864e5;
   var current = Math.floor((now - start) / (7 * day)) + 1; // 1-based week
   var box = document.getElementById('weeks');
-  var wkn = ['10–11 Oct', '17–18 Oct', '24–25 Oct', '31 Oct'];
-  for (var i = 1; i <= 4; i++) {
+  for (var i = 1; i <= 13; i++) {
     var d = document.createElement('div');
     d.className = 'wk' + (i < current ? ' done' : '') + (i === current ? ' now' : '');
-    var t = document.createElement('span'); t.textContent = 'Week ' + i;
-    var b = document.createElement('b'); b.textContent = wkn[i - 1];
-    d.appendChild(t); d.appendChild(b);
-    d.title = 'Week ' + i + ', 1:1 weekend ' + wkn[i - 1];
+    d.textContent = i;
+    d.title = 'Week ' + i;
     box.appendChild(d);
   }
   var cap = document.getElementById('weekNow');
@@ -272,9 +245,24 @@ Link to LinkedIn or CV:</pre>
   } else if (now > end) {
     cap.textContent = 'Complete';
   } else {
-    cap.textContent = 'Week ' + Math.min(current, 4) + ' of 4';
+    cap.textContent = 'Week ' + Math.min(current, 13) + ' of 13';
   }
 
+  function wireCopy(btn, el, label) {
+    btn.addEventListener('click', function () {
+      var fallback = function () {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        btn.textContent = 'Selected, press Ctrl+C';
+      };
+      try {
+        navigator.clipboard.writeText(el.textContent).then(function () {
+          btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = label; }, 1800);
+        }, fallback);
+      } catch (e) { fallback(); }
+    });
+  }
+  wireCopy(document.getElementById('copyAddr'), document.getElementById('addr'), 'Copy address');
   var btn = document.getElementById('copyBtn');
   var tpl = document.getElementById('tpl');
   btn.addEventListener('click', function () {

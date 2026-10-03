@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Project Vikas: a free weekly mentoring circle for young women in tech, October to December 2026, dedicated to my father Vikas on his 61st birthday.">
+<meta name="description" content="Project Vikas: a free Saturday-evening mentoring circle for young women in tech, October to December 2026, dedicated to my father Vikas on his 61st birthday.">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Project Vikas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a dedication letter up top, then the programme as a single readable column with a 13-week calendar strip */
+/* Layout: a dedication letter up top, then the programme as a single readable column with a strip of the 12 Saturday Circles */
 :root {
   --bg: #F6F5FA;
   --surface: #FFFFFF;
@@ -66,8 +66,8 @@ section > p { max-width: 62ch; color: var(--ink); }
 .fact .t { font-size: 14px; color: var(--muted); }
 
 /* Week strip */
-.weeks { display: grid; grid-template-columns: repeat(13, 1fr); gap: 6px; }
-.wk { aspect-ratio: 1 / 1.4; max-width: 100%; border: 1px solid var(--line); border-radius: 4px; display: grid; place-items: end center; padding-bottom: 6px; font-family: var(--mono); font-size: 11px; color: var(--muted); background: var(--surface); }
+.weeks { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; }
+.wk { aspect-ratio: 1 / 1.4; max-width: 100%; border: 1px solid var(--line); border-radius: 4px; display: grid; place-content: end center; text-align: center; padding-bottom: 6px; font-family: var(--mono); font-size: 11px; line-height: 1.25; color: var(--muted); background: var(--surface); }
 .wk.done { background: var(--marigold-soft); border-color: transparent; }
 .wk.now { background: var(--marigold); color: var(--bg); border-color: var(--marigold); font-weight: 500; }
 .weeks-cap { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--muted); gap: 12px; flex-wrap: wrap; }
@@ -129,8 +129,8 @@ footer .hi { font-family: var(--display); color: var(--indigo); font-size: 18px;
   .fact + .fact { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
   .tracks { grid-template-columns: 1fr; }
   .topics li { grid-template-columns: 1fr; gap: 4px; }
-  .weeks { gap: 3px; }
-  .wk { font-size: 9px; }
+  .weeks { grid-template-columns: repeat(6, 1fr); gap: 4px; }
+  .wk { aspect-ratio: 1 / 1; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .wk.now { animation: glow 2.4s ease-in-out infinite alternate; }
@@ -158,24 +158,24 @@ footer .hi { font-family: var(--display); color: var(--indigo); font-size: 18px;
   <section id="about">
     <span class="label">The project</span>
     <h2>One free hour a week, for young women finding their footing in tech</h2>
-    <p>From October to the end of December 2026, I'm hosting a free one-hour mentoring circle every week for young women in technology. Some are early in their careers and want to move faster. Some are between jobs and want a way back in. All of them deserve someone in their corner who believes they can grow into their own power at work.</p>
+    <p>Starting Saturday 10 October and running to the end of 2026, I'm hosting a free one-hour mentoring circle every Saturday evening, Sydney time, for young women in technology. Some are early in their careers and want to move faster. Some are between jobs and want a way back in. All of them deserve someone in their corner who believes they can grow into their own power at work.</p>
     <div class="facts">
-      <div class="fact"><span class="n">1 hr</span><span class="t">every week, on one call</span></div>
-      <div class="fact"><span class="n">13</span><span class="t">weeks, October to December</span></div>
+      <div class="fact"><span class="n">1 hr</span><span class="t">every Saturday evening, Sydney time</span></div>
+      <div class="fact"><span class="n">12</span><span class="t">Circles, 10 October to 26 December</span></div>
       <div class="fact"><span class="n">Free</span><span class="t">for every woman who joins</span></div>
     </div>
   </section>
 
   <section id="calendar">
     <span class="label">Where we are</span>
-    <div class="weeks" id="weeks" aria-label="13 weeks from 5 October to 31 December 2026"></div>
-    <div class="weeks-cap"><span>Mon 5 Oct 2026</span><span id="weekNow"></span><span>Thu 31 Dec 2026</span></div>
+    <div class="weeks" id="weeks" aria-label="12 Saturday Circles from 10 October to 26 December 2026"></div>
+    <div class="weeks-cap"><span>First Circle · Sat 10 Oct</span><span id="weekNow"></span><span>Last Circle · Sat 26 Dec</span></div>
   </section>
 
   <section id="circle">
     <span class="label">How it works</span>
     <h2>The Circle</h2>
-    <p>Women who are working and women who are between jobs meet on the same call, once a week. Each week I teach one topic, then we work through real situations from the group. You'll hear what's happening inside companies right now, and you'll build a network of women going through the same things you are.</p>
+    <p>Women who are working and women who are between jobs meet on the same call every Saturday evening, Sydney time. Each week I teach one topic, then we work through real situations from the group. You'll hear what's happening inside companies right now, and you'll build a network of women going through the same things you are.</p>
   </section>
 
   <section id="topics">
@@ -193,7 +193,8 @@ footer .hi { font-family: var(--display); color: var(--indigo); font-size: 18px;
   <section id="mentor">
     <span class="label">Your mentor</span>
     <h2>Tanya</h2>
-    <p>I'm a GenAI engineer based in Sydney. I build agentic AI systems with banks, financial services firms and hospitals across Asia-Pacific, the US and Europe. I've learned most of what I know about standing my ground from my father, and the rest from years of doing the work.</p>
+    <p>I'm a Forward Deployed Engineer based in Sydney, working with digital-native companies to take generative AI from prototype to production. I sit with their engineering teams and build alongside them, mostly on agentic AI systems that have to work reliably in the real world.</p>
+    <p>Over the years I've worked across production machine learning, voice AI, fine-tuning large language models, knowledge graphs and evaluating how well AI agents actually perform. I care most about building AI that people can trust, with clear guardrails designed in from the start.</p>
   </section>
 
   <section id="apply">
@@ -225,28 +226,30 @@ LinkedIn (optional):</pre>
 
 <script>
 (function () {
-  var start = new Date(2026, 9, 5);           // Mon 5 Oct 2026
-  var end = new Date(2026, 11, 31, 23, 59);   // Thu 31 Dec 2026
-  var now = new Date();
-  var day = 864e5;
-  var current = Math.floor((now - start) / (7 * day)) + 1; // 1-based week
+  // Circles run Saturday evenings, Sydney time: 10 Oct to 26 Dec 2026
+  var mon = ['Oct','Oct','Oct','Oct','Nov','Nov','Nov','Nov','Dec','Dec','Dec','Dec'];
+  var day = [10,17,24,31,7,14,21,28,5,12,19,26];
+  // each Circle counts as done once Saturday 9pm Sydney (UTC+11) has passed
+  var ends = day.map(function (d, i) {
+    var m = mon[i] === 'Oct' ? 9 : mon[i] === 'Nov' ? 10 : 11;
+    return Date.UTC(2026, m, d, 10, 0);
+  });
+  var now = Date.now();
+  var next = ends.findIndex(function (t) { return now < t; }); // -1 when all done
   var box = document.getElementById('weeks');
-  for (var i = 1; i <= 13; i++) {
-    var d = document.createElement('div');
-    d.className = 'wk' + (i < current ? ' done' : '') + (i === current ? ' now' : '');
-    d.textContent = i;
-    d.title = 'Week ' + i;
-    box.appendChild(d);
+  for (var i = 0; i < 12; i++) {
+    var el = document.createElement('div');
+    var done = next === -1 || i < next;
+    el.className = 'wk' + (done ? ' done' : '') + (i === next ? ' now' : '');
+    el.innerHTML = '';
+    var a = document.createElement('span'); a.textContent = day[i];
+    var b = document.createElement('span'); b.textContent = mon[i];
+    el.appendChild(a); el.appendChild(document.createElement('br')); el.appendChild(b);
+    el.title = 'Circle ' + (i + 1) + ': Saturday ' + day[i] + ' ' + mon[i];
+    box.appendChild(el);
   }
   var cap = document.getElementById('weekNow');
-  if (now < start) {
-    var days = Math.ceil((start - now) / day);
-    cap.textContent = 'Starts in ' + days + (days === 1 ? ' day' : ' days');
-  } else if (now > end) {
-    cap.textContent = 'Complete';
-  } else {
-    cap.textContent = 'Week ' + Math.min(current, 13) + ' of 13';
-  }
+  cap.textContent = next === -1 ? 'Complete' : 'Next: Sat ' + day[next] + ' ' + mon[next];
 
   function wireCopy(btn, el, label) {
     btn.addEventListener('click', function () {
